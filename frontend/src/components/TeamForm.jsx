@@ -4,7 +4,7 @@ import { urlImagen } from '../utils/format';
 
 const empty = { nombre: '', marca: '', modelo: '' };
 
-export default function TeamForm({ editing, onSubmit, onCancel }) {
+export default function TeamForm({editing, onSubmit, onCancel }) {
     const [form, setForm] = useState(empty);
     const [imagenFile, setImagenFile] = useState(null);
     const [preview, setPreview] = useState(null);
@@ -24,7 +24,7 @@ export default function TeamForm({ editing, onSubmit, onCancel }) {
         });
     }
 
-    function changeImagen(event) {
+    function  changeImagen(event) {
         const file = event.target.files?.[0];
         if (!file) return;
 
@@ -34,7 +34,7 @@ export default function TeamForm({ editing, onSubmit, onCancel }) {
 
     function submit(event) {
         event.preventDefault();
-        onSubmit({ ...form, imagenFile });
+        onSubmit({...form, imagenFile });
         setForm(empty);
         setImagenFile(null);
         setPreview(null);
@@ -68,7 +68,7 @@ export default function TeamForm({ editing, onSubmit, onCancel }) {
                 {editing && (
                     <button type="button" className="secondary" onClick={onCancel}>
                         <X size={16} />
-                        Cancelar
+                        Cancelar 
                     </button>
                 )}
             </div>

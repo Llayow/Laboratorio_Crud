@@ -11,7 +11,7 @@ export default function App() {
         <BrowserRouter>
             <AuthProvider>
                 <Routes>
-                    <Route path="/login" element={<LoginPage />} />
+                    <Route path="/login" element={<LoginPage />} /> 
                     <Route path="/registro" element={<RegisterPage />} />
 
                     <Route element={<ProtectedRoute />}>

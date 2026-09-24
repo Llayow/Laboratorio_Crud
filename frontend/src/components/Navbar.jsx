@@ -8,17 +8,17 @@ export default function Navbar() {
     return (
         <nav className="navbar">
             <Link to="/equipos" className="brand">
-                <LayoutGrid size={22} />
-                LAB CRUD
+            <LayoutGrid size={22} />
+            LAB CRUD 
             </Link>
 
             <div className="nav-right">
                 <span>
-                    {user?.nombre} · <strong>{user?.rol}</strong>
+                    {user?.nombre} . <strong>{user?.rol}</strong>
                 </span>
                 <button className="secondary" onClick={logout}>
                     <LogOut size={16} />
-                    Cerrar sesión
+                    Cerrar sesión 
                 </button>
             </div>
         </nav>

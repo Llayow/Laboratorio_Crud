@@ -3,7 +3,7 @@ const pool = require('../config/db');
 const { createToken } = require('../utils/jwt');
 const AppError = require('../utils/AppError');
 
-async function registerUser({ nombre, email, password }) {
+async function registerUser({ nombre, email, password}) {
     if (!nombre || !email || !password) {
         throw new AppError('nombre, email y password son obligatorios', 400);
     }
@@ -14,7 +14,7 @@ async function registerUser({ nombre, email, password }) {
     );
 
     if (existing.length) {
-        throw new AppError('El correo ya está registrado', 409);
+        throw new AppError('El correo ya esta registrado', 409);
     }
 
     const hash = await bcrypt.hash(password, 10);
@@ -24,7 +24,7 @@ async function registerUser({ nombre, email, password }) {
         [nombre, email, hash, 'cliente']
     );
 
-    return { id_usuario: result.insertId };
+    return { id_usuario: result.insertId};
 }
 
 async function loginUser({ email, password }) {
@@ -38,14 +38,14 @@ async function loginUser({ email, password }) {
     );
 
     if (!rows.length) {
-        throw new AppError('Credenciales incorrrectas', 401);
+        throw new AppError('Credenciales incorrectas', 401);
     }
 
     const user = rows[0];
     const valid = await bcrypt.compare(password, user.password);
 
     if (!valid) {
-        throw new AppError('Credenciales incorrrectas', 401);
+        throw new AppError('Credenciales incorrectas', 401);
     }
 
     delete user.password;

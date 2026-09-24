@@ -8,7 +8,7 @@
 **/.env
 **/.env.local
 **/.env.development
-**/.env.production
+*//.env.production
 **/.env.*.local
 
 # Build / salida de compilación

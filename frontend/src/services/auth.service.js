@@ -8,7 +8,7 @@ export function register(data) {
 }
 
 export function login(data) {
-    return api('/auth/login', {
+    return api('/auth/login', { 
         method: 'POST',
         body: JSON.stringify(data)
     });

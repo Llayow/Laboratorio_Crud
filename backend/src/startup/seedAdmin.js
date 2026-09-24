@@ -3,10 +3,10 @@ const pool = require('../config/db');
 const env = require('../config/env');
 
 async function seedAdmin() {
-    const {name, email, password} = env.admin;
+    const { name, email, password } = env.admin;
 
     if (!name || !email || !password) {
-        console.error('Seed de admin omitido: ADMIN_NAME/ADMIN_EMAIL/ADMIN_PASSWORD no están configurados');
+        console.log('seed de admin omitido: ADMIN_NAME/ADMIN_EMAIL/ADMIN_PASSWORD no configurados');
         return;
     }
 
@@ -15,8 +15,8 @@ async function seedAdmin() {
         [email]
     );
 
-    if (existing.length) { 
-        console.log('Seed de admin omitido: ya existe un usuario con ese email');
+    if (existing.length) {
+        console.log('seed de admin omitido: ya existe un usuario con ese email');
         return;
     }
 
@@ -27,7 +27,7 @@ async function seedAdmin() {
         [name, email, hash, 'admin']
     );
 
-    console.log(`Usuario admin creado: ${email}`);
+    console.log('Usuario admin creado: ');
 }
 
 module.exports = seedAdmin;

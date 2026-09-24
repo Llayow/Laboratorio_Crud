@@ -1,21 +1,19 @@
 {
-  "name": "lab-crud-backend",
+  "name": "backend",
   "version": "1.0.0",
-  "description": "Backend pedagógico CRUD + autenticación + roles",
+  "description": "Backend pedagogico CRUD + autenticacion + roles",
   "keywords": [
     "laboratorio",
     "backend"
   ],
   "license": "ISC",
-  "author": "Jafet Hernández",
+  "author": "Kevin",
   "type": "commonjs",
   "main": "server.js",
-  "directories": {
-    "doc": "docs"
-  },
   "scripts": {
-    "dev": "nodemon server.js",
-    "start": "node server.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
   "dependencies": {
     "bcrypt": "^6.0.0",
@@ -24,7 +22,7 @@
     "express": "^5.2.1",
     "jsonwebtoken": "^9.0.3",
     "multer": "^2.3.0",
-    "mysql2": "^3.24.3"
+    "mysql2": "^3.24.2"
   },
   "devDependencies": {
     "nodemon": "^3.1.14"

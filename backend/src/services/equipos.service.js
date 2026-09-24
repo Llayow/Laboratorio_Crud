@@ -34,7 +34,7 @@ async function getEquipoById(id) {
 
 async function createEquipo({ nombre, marca, modelo }, imagen) {
     if (!nombre) {
-        throw new AppError('nombre es obligatorio', 400); 
+        throw new AppError('nombre es obligatorio', 400);
     }
 
     const [result] = await pool.execute(

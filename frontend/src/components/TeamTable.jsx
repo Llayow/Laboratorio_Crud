@@ -15,7 +15,7 @@ export default function TeamTable({ equipos, canDelete, onEdit, onDelete }) {
         <div className="equipos-section">
             <h2>Equipos</h2>
 
-            <div className="equipos-grid">
+            <div className="equipos-gird">
                 {equipos.map((equipo) => {
                     const imagen = urlImagen(equipo.imagen);
 
@@ -28,7 +28,7 @@ export default function TeamTable({ equipos, canDelete, onEdit, onDelete }) {
                             <div className="equipo-card-body">
                                 <h3>{equipo.nombre}</h3>
                                 <p className="equipo-card-meta">
-                                    {equipo.marca || 'Sin marca'} · {equipo.modelo || 'Sin modelo'}
+                                    {equipo.marca || 'Sin marca'} . {equipo.modelo || 'Sin modelo'}
                                 </p>
                             </div>
 

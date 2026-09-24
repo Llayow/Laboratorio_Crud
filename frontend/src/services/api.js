@@ -6,12 +6,12 @@ export async function api(endpoint, options = {}) {
     const isFormData = options.body instanceof FormData;
 
     const headers = {
-        ...(isFormData ? {} : { 'Content-Type': 'application/json' }),
+        ...(isFormData ? {} : { 'Content-Type': 'application/json'}),
         ...(options.headers || {})
     };
 
     if (token) {
-        headers.Authorization = `Bearer ${token}`;
+        headers.Authorization = `Bearer ${token}`
     }
 
     const response = await fetch(`${API_URL}${endpoint}`, {

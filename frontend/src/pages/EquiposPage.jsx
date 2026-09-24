@@ -64,22 +64,22 @@ export default function EquiposPage() {
             <main className="container">
                 <header className="page-header">
                     <h1>CRUD de equipos</h1>
-                    <p>Sesión: {user?.email} · Rol: <strong>{user?.rol}</strong></p>
+                    <p>Sesión: {user?.email} . Rol: <strong>{user?.rol}</strong></p>
                 </header>
 
                 {error && <p className="error">{error}</p>}
 
                 <TeamForm
-                    editing={editing}
-                    onSubmit={save}
-                    onCancel={() => setEditing(null)}
+                editing={editing}
+                onSubmit={save}
+                onCancel={() => setEditing(null)}
                 />
 
                 <TeamTable
-                    equipos={equipos}
-                    canDelete={user?.rol === 'admin'}
-                    onEdit={setEditing}
-                    onDelete={remove}
+                equipos={equipos}
+                canDelete={user?.rol === 'admin'}
+                onEdit={setEditing}
+                onDelete={remove}
                 />
             </main>
         </>

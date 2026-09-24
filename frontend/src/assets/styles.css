@@ -1,19 +1,19 @@
 * { box-sizing: border-box; }
 
-:root {
+:root { 
     font-family: Arial, sans-serif;
     color: #1f2937;
     background: #f3f4f6;
 
-    /* Teal: acción de editar/actualizar */
+    /* Teal: Accion de editar/actualizar*/
     --teal: #0d9488;
     --teal-dark: #0f766e;
 
-    /* Azul: acción de crear */
+    /* Azul: accion de crear*/
     --blue: #2563eb;
     --blue-dark: #1d4ed8;
 
-    /* Gama de grises: acciones neutras (cancelar, eliminar) y texto */
+    /* Gama de grises: acciones neutras (cancelar, eliminar) y texto*/
     --gray-900: #111827;
     --gray-700: #374151;
     --gray-500: #6b7280;
@@ -22,7 +22,7 @@
 
     --white: #fff;
 
-    /* Sombras y radios reutilizables */
+    /* sombras y radios reutilizables */
     --shadow-sm: 0 2px 8px rgba(0,0,0,.06);
     --shadow-md: 0 4px 16px rgba(0,0,0,.10);
     --radius: 8px;
@@ -33,7 +33,7 @@ body { margin: 0; background: var(--gray-100); }
 
 button, input, select { font: inherit; }
 
-/* Botón por defecto = azul → acción de crear */
+/*botón por defecto = azul -> accion de crear */
 button {
     display: inline-flex;
     align-items: center;
@@ -50,7 +50,7 @@ button {
 
 button:hover { background: var(--blue-dark); }
 
-button:focus-visible {
+button:focus-visible { 
     outline: 2px solid var(--teal);
     outline-offset: 2px;
 }
@@ -60,13 +60,13 @@ button:disabled {
     cursor: not-allowed;
 }
 
-/* Editar / Actualizar = teal */
-button.edit { background: var(--teal); }
-button.edit:hover { background: var(--teal-dark); }
+/* Editar / Actualizar = teal*/
+button.edit { background: var(--teal);}
+button.edit:hover { background: var(--teal-dark);}
 
-/* Cancelar / Eliminar = gris */
-button.secondary { background: var(--gray-500); }
-button.secondary:hover { background: var(--gray-700); }
+/* cancelar / eliminar = gris */
+button.secondary { background: var(--gray-500);}
+button.secondary:hover { background: var(--gray-700);}
 
 .navbar {
     min-height: 64px;
@@ -140,15 +140,15 @@ input, select {
 input:focus, select:focus {
     outline: 2px solid var(--teal);
     outline-offset: 1px;
-}
+    }
 
-.actions {
+.actions { 
     display: flex;
     gap: 8px;
     align-items: center;
 }
 
-table {
+table{
     width: 100%;
     border-collapse: collapse;
 }
@@ -169,8 +169,8 @@ th, td {
     text-align: left;
 }
 
-tbody tr:nth-child(even) { background: #f8fafc; }
-tbody tr:hover { background: #f0fdfa; }
+tbody tr:nth-child(even) { background: #f8fafc;}
+tbody tr:hover { background: #f0fdfa;}
 
 .auth-page {
     min-height: 100vh;
@@ -267,7 +267,7 @@ tbody tr:hover { background: #f0fdfa; }
     font-size: 0.9rem;
 }
 
-small { color: var(--gray-500); }
+small{ color: var(--gray-500);}
 
 .empty-state {
     display: flex;
@@ -280,9 +280,9 @@ small { color: var(--gray-500); }
     text-align: center;
 }
 
-/* Cards de equipos (imagen + nombre/marca/modelo) */
-.equipos-section { margin-top: 8px; }
-.equipos-section h2 { margin-bottom: 12px; }
+/* Cards de equipos (imagen+ nombre/marca/modelo) */
+.equipos-section { margin-top: 8px;}
+.equipos-section h2 { margin-bottom: 12px;}
 
 .equipos-grid {
     display: grid;
@@ -370,7 +370,7 @@ small { color: var(--gray-500); }
 }
 
 @media (min-width: 641px) and (max-width: 1024px) {
-    .container { width: min(900px, calc(100% - 48px)); }
+    .container { width: min(900px, calc(100% - 48px));}
 }
 
 @media (max-width: 640px) {
@@ -383,11 +383,11 @@ small { color: var(--gray-500); }
 
     .nav-right { flex-direction: column; gap: 10px; }
 
-    .brand { font-size: 1.2rem; }
+    .brand { font-size: 1.2rem;}
 
-    .container { margin: 16px auto; }
+    .container { margin: 16px auto;}
 
-    .actions { flex-wrap: wrap; }
+    .actions { flex-wrap: wrap;}
 
     .form-grid .actions {
         flex-direction: column;
@@ -397,5 +397,5 @@ small { color: var(--gray-500); }
         width: 100%;
     }
 
-    table { display: block; overflow-x: auto; }
+    table { display: block; overflow-x: auto;}
 }

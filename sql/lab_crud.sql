@@ -1,9 +1,9 @@
 # Esta base de datos, No representa una empresa. Es un laboratorio de datos donde se practican diferentes operaciones CRUD.
 
-CREATE DATABASE IF NOT EXISTS laboratorio_crud
+CREATE DATABASE IF NOT EXISTS lab_crud
 CHARACTER SET utf8mb4
 COLLATE utf8mb4_unicode_ci;
-USE laboratorio_crud;
+USE lab_crud;
 
 DROP TABLE IF EXISTS equipos;
 DROP TABLE IF EXISTS usuarios;
@@ -27,6 +27,6 @@ CREATE TABLE equipos (
 );
 
 INSERT INTO equipos (nombre, marca, modelo) VALUES
-('Portátil', 'Lenovo', 'ThinkPad'),
-('Monitor', 'LG', 'UltraWide'),
+('portatil', 'Lenovo', 'ThinkPad'),
+('Monito', 'LG', 'UltraWide'),
 ('Teclado', 'Logitech', 'K120');

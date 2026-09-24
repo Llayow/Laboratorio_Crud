@@ -1,6 +1,6 @@
-import { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { AlertCircle, Eye, EyeOff, Lock, UserPlus } from 'lucide-react';
+import { useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
+import { AlertCircle, Eye, EyeOff, Lock, UserPlus} from 'lucide-react'
 import { register } from '../services/auth.service';
 
 export default function RegisterPage() {
@@ -8,13 +8,13 @@ export default function RegisterPage() {
     const [form, setForm] = useState({
         nombre: '',
         email: '',
-        password: ''
+        password: '',
     });
     const [error, setError] = useState('');
     const [showPassword, setShowPassword] = useState(false);
 
     function change(event) {
-        setForm({ ...form, [event.target.name]: event.target.value });
+        setForm({...form, [event.target.name]: event.target.value });
     }
 
     async function submit(event) {
@@ -51,11 +51,11 @@ export default function RegisterPage() {
                         className="has-toggle"
                         required
                     />
-                    <button
-                        type="button"
-                        className="toggle-visibility"
-                        onClick={() => setShowPassword((value) => !value)}
-                        aria-label={showPassword ? 'Ocultar contraseña' : 'Mostrar contraseña'}
+                    <button 
+                    type="button"
+                    className="toggle-visibility"
+                    onClick={() => setShowPassword((value) => !value)}
+                    aria-label={showPassword ? 'Ocultar contraseña' : 'Mostrar contraseña'}
                     >
                         {showPassword ? <EyeOff size={16} /> : <Eye size={16} />}
                     </button>
@@ -63,7 +63,7 @@ export default function RegisterPage() {
 
                 <button type="submit">
                     <UserPlus size={16} />
-                    Registrarme
+                    Registrarme 
                 </button>
                 <p>¿Ya tienes cuenta? <Link to="/login">Iniciar sesión</Link></p>
             </form>

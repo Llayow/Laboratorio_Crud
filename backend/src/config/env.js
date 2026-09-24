@@ -1,9 +1,9 @@
 require('dotenv').config();
 
-const required = ['DB_HOST','DB_USER', 'DB_PASSWORD', 'DB_NAME', 'JWT_SECRET'];
+const required = ['DB_HOST','DB_USER','DB_NAME','JWT_SECRET'];
 
 for (const name of required) {
-    if(!process.env[name]){
+    if (!process.env[name]) {
         throw new Error(`Falta la variable de entorno: ${name}`);
     }
 }
