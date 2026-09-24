@@ -3,7 +3,7 @@
 CREATE DATABASE IF NOT EXISTS lab_crud
 CHARACTER SET utf8mb4
 COLLATE utf8mb4_unicode_ci;
-USE lab_crud;
+USE laboratorio_crud;
 
 DROP TABLE IF EXISTS equipos;
 DROP TABLE IF EXISTS usuarios;
